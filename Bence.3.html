@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by BigBence (http://jsbin.com/gasuna/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="Bence">
+<table width=400 border=0 align=center>
+<tr>
+<td>
+<marquee width=400>
+  <h1>Nagy Bence Weboldala</h1>
+  <img src=https://scontent.fomr1-1.fna.fbcdn.net/v/t1.0-9/12573773_1097837733595061_1818577003518470256_n.jpg?oh=25a3108bb70254e6ab1a9d2914b68324&oe=58D0744D />
+</marquee>
+</td>
+</tr>
+</table>
+    <script language="Javascript" type="text/javascript">
+  var counter = 0;
+    // call Update function in 2 second after first load
+    ID=window.setTimeout ("Update();",2000) ;
+    function Update() {
+      counter++;
+      window.status="A számláló már elindult" + counter;
+      document.form1.input1.value="A számláló már elindult " + counter;
+      // set another timeout for the next count
+      ID=window.setTimeout("Update();",2000);
+    }
+  </script>
+<style id="jsbin-css">
+html {
+  background: lightgreen;
+}
+img {
+  height: 250px;
+}
+p {
+  color: darkgreen;
+}
+p1 {
+  color: #4169E1;
+}
+body {
+  color: green;
+}
+h1 {
+  color: black;
+}
+p3 {
+  color: brown;
+}
+</style>
+</head>
+<style>
+#container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background: green;
+}
+#animate {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+  <a href="http://www.hildvk.hu/"   title="magyarázó szöveg"><h2>Jelenleg itt dolgozom.</h2></a>
+  <a href="http://info.szolnok.hu/" title="magyarázó szöveg"><h2>Jelenleg itt lakom.</h2></a>
+  <p1 id="demo" style="display:none">Jó szörfözést a neten!</p1>
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Kattints ide!</button>
+  <form action="demo_form.asp" method="post">
+  <input type="text" name="fname" required>
+  <input type="submit" value="Írja ide a lakhelyét!">
+</form>
+    <h1>Párbeszédablak jóváhagyás</h1>
+  <hr>
+  <form NAME="winform">
+    <p><input TYPE="button" VALUE="Visszajátszó figyelmeztetés"
+              onClick="window.alert('Ez egy teszt.');"></p>
+    <p><input TYPE="button" VALUE="Jóváhagyás"
+              onClick="temp =window.confirm('Elszeretnéd fogadni?');
+      window.status=(temp) ?'confirm: true':'confirm: false'; "></p>
+  </form>
+  <hr>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+ Kattints ide a pontos időért és láthatod a Kattints ide gomb fölött.</button>
+<p id="demo"></p>
+     <h1>Nyiss új ablakot</h1>
+  <p>Új ablak nyitása és zárása.</p>
+  <hr>
+  <form NAME="winform">
+    <input TYPE="button" VALUE="Nyiss új ablakot"
+ onClick="NewWin=window.open('','NewWin',
+      'toolbar=no,status=no,width=200,height=100'); ">
+    <p><input TYPE="button" VALUE="Új ablak zárása"
+              onClick="NewWin.close();" ></p>
+  </form>
+  <hr>
+  <div align=center><table height=270 width=400 border=0 align=right><tr><td>
+  <marquee width=400>
+ <img src=http://uni-obuda.hu/files/page/325.jpg?1296210792 />
+ <img src=https://www.soterline.hu/wp-content/uploads/2015/08/gazdasagi_informatikus.jpg />
+ </marquee></td></tr></table></div>
+<select id="selectem" style="width: 300px; height: 42px; border: 1px solid #FF5500; background-color: #221111;">
+<option style="color: #FF0000; background-color: #330000;" selected="selected">Válassz!</option>
+<option style="color: #FF6600; background-color: #331900;">első</option>
+<option style="color: #DDFF00; background-color: #2D3300;">második</option>
+<option style="color: #44FF11; background-color: #183306;">harmadik</option>
+</select>
+<style>
+select#selectem option {background-color: #221111; font-family: Comic Sans MS; height: 30px; text-align: center; padding-top: 3px; font-size: 18px;}
+select#selectem {color: #FF5500; font-family: Comic Sans MS; margin-top: 3px; margin-left: 7px; text-align: center; padding: 2px; font-size: 25px;}
+select#selectem:hover {color: #DD0000; font-family: Comic Sans MS;}</style><!-- HTML & CSS by srmark -->
+  <marquee width="200" height="65" direction="up" scrollamount="1" onmouseout="this.start()" style="FILTER: Alpha(Opacity=100, FinishOpacity=0, Style=1, StartX=0, StartY=30, FinishX=0, FinishY=0)" onmouseover="this.stop()"><center><font face="verdana" color="#874111">
+- függőleges felsorolás<br />
+- Futó szöveg<br />
+- Állítsd meg egérrel<br />
+</font></center></marquee>
+        <hr><p>
+  Állítsd meg a számlálót ha akarod!
+  Nyomd meg a STOP gombot.
+  </p><hr>
+  <form NAME="form1">
+    <input TYPE="text" NAME="input1" SIZE="40"><br>
+    <input TYPE="button" VALUE="STOP"
+           onClick="window.clearTimeout(ID);">
+  </form>
+  <hr>
+          <h2>Egy kis egyszerű játék.</h2>
+<button onclick="myMove()">Indítás</button>
+<div id ="container">
+<div id ="animate"></div>
+</div>
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px';
+    }
+  }
+}
+</script>
+       <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+style="background-color:#F0E68C;width:220px;height:20px;padding:40px;">
+Mouse Over Me
+       </div>
+
+ <script>
+function mOver(obj) {
+    obj.innerHTML = "Gratulálok"
+}
+function mOut(obj) {
+    obj.innerHTML = "Nyertél"
+}
+ </script>
+       <button onclick="myFunction()">Jelöld ki a szövegeket!
+       </button>
+<hr>
+    <p3>Ezt a gombot csak akkor használja ha be akarja zárni ezt az oldalt  <input TYPE="button" VALUE="Fő ablak zárása"
+              onClick="window.close();"></p3>
+ <script>
+function myFunction() {
+    var myNodelist = document.getElementsByTagName("p");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.backgroundColor = "orange";
+    }
+}
+ </script>
+<script id="jsbin-javascript">
+alert ('Üdvözöllek az oldalamon. Jó szórakozást kívánok mindenkinek.')
+</script>
+</body>
+</html>
